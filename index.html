@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8" />
+	<title>Screenplay Generator</title>
+
+	<style>
+		* {
+			box-sizing: border-box;
+			font-size: 100%;
+		}
+
+		html {
+			font: 100%/1.6 system-ui, Arial, sans-serif;
+		}
+
+		fieldset {
+			margin-bottom: 1em;
+			border: 1px dashed #000;
+		}
+
+		h2 {
+			margin: 0 0 0.5em 0;
+		}
+
+		input {
+			padding: 0.25em;
+		}
+
+		select {
+			display: block;
+			width: 30ch;
+			margin-bottom: 0.5em;
+		}
+
+		.settings > div {
+			display: flex;
+			flex-flow: row wrap;
+		}
+
+		.settings > div > * {
+			/* width: 25%; */
+			margin-right: 2em;
+		}
+
+		input[type="submit"] {
+			display: block;
+			width: 30ch;
+			background: #000;
+			padding: 0.5em 0.25em 0.6em;
+			color: #fff;
+			border: 0;
+			border-radius: 0.4em;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="app">
+		<form>
+			<fieldset class="settings" v-if="content.mainValues">
+				<h2>Grundwerte</h2>
+				<div>
+					<div class="humor">
+						Humor: <select @change="changeHumor">
+							<option v-for="val, key in content.mainValues.humor" :key="key" :value="key">{{ val }}</option>
+						</select>
+					</div>
+					<div class="violence">
+						Gewalt: <select>
+							<option v-for="val in content.mainValues.violence" :key="val">{{ val }}</option>
+						</select>
+					</div>
+					<div class="erotica">
+						Erotik: <select>
+							<option v-for="val in content.mainValues.erotica" :key="val">{{ val }}</option>
+						</select>
+					</div>
+					<div class="romance">
+						Romantik: <select>
+							<option v-for="val in content.mainValues.romance" :key="val">{{ val }}</option>
+						</select>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset class="protagonists" v-if="content.protagonistValues">
+				<h2>Der Protagonist</h2>
+				<input type="text" name="protagonistName" placeholder="Name des Protagonisten" @change="setCharacterName('protagonists', 0, $event)" />, ein(e)<br />
+				<select v-for="amount in content.protagonistValues.attributesAmount.positive">
+					<option value="unset">keine Auswahl</option>
+					<option v-for="val in content.protagonistValues.positiveAttributes" :key="val.attribute">{{ val.attribute }}</option>
+				</select><br />
+				<select v-for="amount in content.protagonistValues.attributesAmount.negative">
+					<option value="unset">keine Auswahl</option>
+					<option v-for="val in content.protagonistValues.negativeAttributes" :key="val.attribute">{{ val.attribute }}</option>
+				</select><br />
+
+				<select class="protagonist-gender">
+					<option v-for="gender, key in content.genders" :key="key" :value="key">{{ gender.name }}</option>
+				</select> dessen Beruf<br />
+
+				<select class="protagonist-skill">
+					<option value="unset">keine Auswahl</option>
+					<option v-for="job in content.protagonistValues.skills[humorSetting]" :key="" :data-description="job.description">{{ job.skill }}</option>
+				</select> ist.
+			</fieldset>
+			<fieldset class="antagonist" v-if="content.antagonistValues">
+				<h2>Der Antagonist</h2>
+				<input type="text" name="antagonistName" placeholder="Name des Antagonisten" @change="setCharacterName('antagonists', 0, $event)" />, ein(e)<br />
+				<select v-for="amount in content.antagonistValues.attributesAmount.positive">
+					<option value="unset">keine Auswahl</option>
+					<option v-for="val in content.antagonistValues.positiveAttributes" :key="val.attribute">{{ val.attribute }}</option>
+				</select><br />
+				<select v-for="amount in content.antagonistValues.attributesAmount.negative">
+					<option value="unset">keine Auswahl</option>
+					<option v-for="val in content.antagonistValues.negativeAttributes" :key="val.attribute">{{ val.attribute }}</option>
+				</select><br />
+
+				<select class="antagonist-gender">
+					<option v-for="gender, key in content.genders" :key="key" :value="key">{{ gender.name }}</option>
+				</select> dessen Beruf<br />
+
+				<select v-for="skill in 3" class="antagonist-skill" :class="'antagonist-skill-' + skill">
+					<option value="unset">keine Auswahl</option>
+					<option v-for="job in content.antagonistValues.skills[humorSetting]" :key="" :data-description="job.description">{{ job.skill }}</option>
+				</select> ist.
+			</fieldset>
+			<fieldset class="story" v-if="content.targetValues">
+				<h2>Die Geschichte</h2>
+				<select @change="changeTarget('primary',$event)">
+					<option v-for="primaryTarget, key in content.targetValues[humorSetting]" :key="key" :value="key">{{ primaryTarget.name }}</option>
+				</select>
+
+				<select @change="changeTarget('secondary',$event)">
+					<option v-for="secondaryTarget, key in content.targetValues[humorSetting][primaryTarget].secondaryTargets" :key="key" :value="key">{{ secondaryTarget.name }}</option>
+				</select> und 
+
+				<select>
+					<option v-for="tertiaryTarget, key in content.targetValues[humorSetting][primaryTarget].secondaryTargets[secondaryTarget].tertiaryTargets" :key="key" :value="key">{{ tertiaryTarget }}</option>
+				</select>
+
+				von Protagonist <span v-if="protagonists[0]">{{ protagonists[0].name }}</span><span v-else>X</span> und seine Leute von 
+
+				<select class="protagonist-job">
+					<option v-for="job, key in content.protagonistValues.jobs[humorSetting]" :key="key" :value="key" :data-description="job.description">{{ job.job }}</option>
+				</select>
+
+				suchen Antagonist <span v-if="antagonists[0]">{{ antagonists[0].name }}</span><span v-else>X</span>, da diese(r)
+
+				<select class="antagonist-method">
+					<option v-for="method, key in content.action[humorSetting].method" :key="key" :value="key" :data-description="method.description">{{ method.name }}</option>
+				</select> aus
+
+				<select class="antagonist-motiv">
+					<option v-for="motiv, key in content.action[humorSetting].motiv" :key="key" :value="key" :data-description="motiv.description">{{ motiv.name }}</option>
+				</select>
+
+				verübt hat.
+
+				<input type="submit" name="Generate" @click.prevent="generateScreenplay()" />
+
+			</fieldset>
+		</form>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script>
+		window.addEventListener('DOMContentLoaded', function () {
+			const app = new Vue({
+				'el': '#app',
+				'data': {
+					'content': {},
+					'humorSetting': 'humorNone',
+					'protagonists': [],
+					'antagonists': [],
+					'primaryTarget': 0,
+					'secondaryTarget': 0
+				},
+				'methods': {
+					'changeHumor': function (event) {
+						const str = event.target.value.charAt(0).toUpperCase() + event.target.value.slice(1);
+						this.humorSetting = 'humor' + str;
+						console.log('changed humor setting to', event.target.value);
+					},
+					'getHumorSetting': function () {
+						return 'humor' + this.humorSetting.charAt(0).toUpperCase() + this.humorSetting.slice(1);
+					},
+					'changeTarget': function (type, event) {
+						console.log(type, event.target.value);
+						this[type + 'Target'] = event.target.value;
+					},
+					'setCharacterName': function (character, index, event) {
+						// reactive update to array!
+						if (!this[character][index]) {
+							Vue.set(this[character], index, {});
+						}
+						Vue.set(this[character][index], 'name', event.target.value);
+						console.log('set', character, 'name to', this[character][index].name);
+					},
+					'generateScreenplay': function () {
+						console.log('generating screenplay script');
+					}
+				}
+			});
+
+			let movieType = 'krimi';
+
+			fetch('./'+movieType+'.json')
+				.then(response => response.json())
+				.then(data => {
+					app.content = data;
+					console.log(app.content);
+				});
+		});
+	</script>
+</body>
+</html>

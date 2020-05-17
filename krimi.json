@@ -1,0 +1,932 @@
+{
+	"mainValues": {
+		"humor": {
+			"none": "kein",
+			"some": "ironisch",
+			"full": "parodie"
+		},
+		"violence": [
+			"unbedenklich",
+			"derb",
+			"menschenverachtend"
+		],
+		"erotica": [
+			"prüde",
+			"prickelnd",
+			"unverblümt"
+		],
+		"romance": [
+			"platonisch",
+			"romantisch",
+			"herzerweichend"
+		]
+	},
+	"genders": {
+		"male": {
+			"name": "Mann",
+			"a": "ein",
+			"the": "der",
+			"who": "welcher",
+			"their": "seine",
+			"suffix": "r"
+		},
+		"female": {
+			"name": "Frau",
+			"a": "eine",
+			"the": "die",
+			"who": "welche",
+			"their": "ihre",
+			"suffix": "in"
+		}
+	},
+	"protagonistValues": {
+		"name": "",
+		"attributesAmount": {
+			"positive": 2,
+			"negative": 2
+		},
+		"positiveAttributes": [
+			{ "attribute": "junge", "description": "geht PRobleme eher intuitiv an" },
+			{ "attribute": "erfahrene", "description": "geht PRobleme eher ueberlegt an" },
+			{ "attribute": "unerschrockene", "description": "hat keine ANgst vor nichts und niemanden" },
+			{ "attribute": "athletische", "description": "ungeheuer beweglich" },
+			{ "attribute": "kuehl denkende", "description": "raeumt EMotionen niemals PLatz ein" },
+			{ "attribute": "routinierte", "description": "probiert nie was aus, sondern kann alles" },
+			{ "attribute": "humorvolle", "description": "hat immer einen lustigen spruch auf den lippen" },
+			{ "attribute": "coole", "description": "weiss wie man auftritt" },
+			{ "attribute": "reiche", "description": "ist privat vermoegend" },
+			{ "attribute": "verdammt gutaussehende", "description": "bekommt alle ins bett" },
+			{ "attribute": "gewissenhafte", "description": "stellt sich nie gegen seine moral" },
+			{ "attribute": "ruhige", "description": "wirkt immer entspannt" },
+			{ "attribute": "charmante", "description": "ein hervorragender gespraechspartner" },
+			{ "attribute": "beliebte", "description": "jeder will sie/ihn kennen" },
+			{ "attribute": "rechtschaffene", "description": "stellt sich nie gegen seine auftraggeber" },
+			{ "attribute": "freundliche", "description": "kommt in gespraechen schnell ins persoenliche" },
+			{ "attribute": "angesehene", "description": "der ruf eilt vorraus" }
+		],
+		"negativeAttributes": [
+			{ "attribute": "unerfahrene", "description": "(r)" },
+			{ "attribute": "angsterfuellte", "description": "(r)" },
+			{ "attribute": "unsichere", "description": "(r)" },
+			{ "attribute": "schmaechtige", "description": "(r)" },
+			{ "attribute": "dicke", "description": "(r)" },
+			{ "attribute": "blinde", "description": "(r)" },
+			{ "attribute": "eitle", "description": "(r)" },
+			{ "attribute": "allergische", "description": "(r)" },
+			{ "attribute": "ungestueme", "description": "(r)" },
+			{ "attribute": "tolpatschige", "description": "(r)" },
+			{ "attribute": "bierernste", "description": "(r)" },
+			{ "attribute": "verschwiegene", "description": "(r)" },
+			{ "attribute": "arme", "description": "(r)" },
+			{ "attribute": "beziehungsunfaehige", "description": "(r)" },
+			{ "attribute": "schlampige", "description": "(r)" },
+			{ "attribute": "staendig nervoese", "description": "(r)" },
+			{ "attribute": "traumatisierte", "description": "(r)" },
+			{ "attribute": "unbeliebte", "description": "(r)" },
+			{ "attribute": "rebellische", "description": "(r)" },
+			{ "attribute": "unfreundliche", "description": "(r)" },
+			{ "attribute": "schwangere", "description": "(r)" }
+		],
+		"skills": {
+			"humorNone": [
+				{ "skill": "privatdetektiv", "description": "DEr PRivatdetektiv springt ueber einen ZAun, um einen GAngster durch diverse GAerten zu verfolgen. BEim VErhoer hofft er auf einen neuen HInweis..." },
+				{ "skill": "streifenpolizist", "description": "DEr STreifenpolizist faehrt dem mutmasslichen TAeter in einer wilden VErfolgungsjagd hinterher." },
+				{ "skill": "kriminalpolizist", "description": "AM TAtort findet der KRiminalpolizist ein winziges DEtail - ein HAar des TAeters." },
+				{ "skill": "gerichtsmediziner", "description": "der gerichtsmediziner findet bei einer obduktion heraus, wie ein mord passiert ist, der mit dem momentanen fall zusammenhaengt." },
+				{ "skill": "anwalt", "description": "DEr ANwalt findet sich selbst in einer gefaehrlichen SItuation, als er in einem dunklen VIertel vor einem GAngster fliehen muss." },
+				{ "skill": "rechtsanwalt", "description": "DEr REchtsanwalt klaert die ERmittler darueber auf, dass sie noch nicht genug BEweise gegen den TAeter in der HAnd haben." }
+			],
+			"humorSome": [
+				{ "skill": "privatdetektiv", "description": "DEr PRivatdetektiv springt ueber einen ZAun, um einen GAngster durch diverse GAerten zu verfolgen. BEim VErhoer hofft er auf einen neuen HInweis..." },
+				{ "skill": "streifenpolizist", "description": "DEr STreifenpolizist faehrt dem mutmasslichen TAeter in einer wilden VErfolgungsjagd hinterher." },
+				{ "skill": "kriminalpolizist", "description": "AM TAtort findet der KRiminalpolizist ein winziges DEtail - ein HAar des TAeters." },
+				{ "skill": "gerichtsmediziner", "description": "der gerichtsmediziner findet bei einer obduktion heraus, wie ein mord passiert ist, der mit dem momentanen fall zusammenhaengt." },
+				{ "skill": "anwalt", "description": "DEr ANwalt findet sich selbst in einer gefaehrlichen SItuation, als er in einem dunklen VIertel vor einem GAngster fliehen muss." },
+				{ "skill": "rechtsanwalt", "description": "DEr REchtsanwalt klaert die ERmittler darueber auf, dass sie noch nicht genug BEweise gegen den TAeter in der HAnd haben." }
+			],
+			"humorFull": [
+				{ "skill": "privatdetektiv", "description": "DEr PRivatdetektiv springt ueber einen ZAun, um einen GAngster durch diverse GAerten zu verfolgen. BEim VErhoer hofft er auf einen neuen HInweis..." },
+				{ "skill": "streifenpolizist", "description": "DEr STreifenpolizist faehrt dem mutmasslichen TAeter in einer wilden VErfolgungsjagd hinterher." },
+				{ "skill": "kriminalpolizist", "description": "AM TAtort findet der KRiminalpolizist ein winziges DEtail - ein HAar des TAeters." },
+				{ "skill": "gerichtsmediziner", "description": "der gerichtsmediziner findet bei einer obduktion heraus, wie ein mord passiert ist, der mit dem momentanen fall zusammenhaengt." },
+				{ "skill": "anwalt", "description": "DEr ANwalt findet sich selbst in einer gefaehrlichen SItuation, als er in einem dunklen VIertel vor einem GAngster fliehen muss." },
+				{ "skill": "rechtsanwalt", "description": "DEr REchtsanwalt klaert die ERmittler darueber auf, dass sie noch nicht genug BEweise gegen den TAeter in der HAnd haben." }
+			]
+		},
+		"jobs": {
+			"humorNone": [
+				{ "job": "deR polizei", "description": "wirklich die ganze" },
+				{ "job": "dEr anwaltskanzlei", "description": "wirklich die ganze" },
+				{ "job": "deR gerichtsmedizin", "description": "wirklich die ganze" },
+				{ "job": "privatdetektiven", "description": "EUropa und USA" }
+			],
+			"humorSome": [
+				{ "job": "deR polizei", "description": "wirklich die ganze" },
+				{ "job": "dEr anwaltskanzlei", "description": "wirklich die ganze" },
+				{ "job": "deR gerichtsmedizin", "description": "wirklich die ganze" },
+				{ "job": "privatdetektiven", "description": "EUropa und USA" }
+			],
+			"humorFull": [
+				{ "job": "deR polizei", "description": "wirklich die ganze" },
+				{ "job": "dEr anwaltskanzlei", "description": "wirklich die ganze" },
+				{ "job": "deR gerichtsmedizin", "description": "wirklich die ganze" },
+				{ "job": "privatdetektiven", "description": "EUropa und USA" }
+			]
+		}
+	},
+	"antagonistValues": {
+		"name": "",
+		"attributesAmount": {
+			"positive": 3,
+			"negative": 3
+		},
+		"positiveAttributes": [
+			{ "attribute": "junge", "description": "geht PRobleme eher intuitiv an" },
+			{ "attribute": "erfahrene", "description": "geht PRobleme eher ueberlegt an" },
+			{ "attribute": "unerschrockene", "description": "hat keine ANgst vor nichts und niemanden" },
+			{ "attribute": "athletische", "description": "ungeheuer beweglich" },
+			{ "attribute": "kuehl denkende", "description": "raeumt EMotionen niemals PLatz ein" },
+			{ "attribute": "routinierte", "description": "probiert nie was aus, sondern kann alles" },
+			{ "attribute": "humorvolle", "description": "hat immer einen lustigen spruch auf den lippen" },
+			{ "attribute": "coole", "description": "weiss wie man auftritt" },
+			{ "attribute": "reiche", "description": "ist privat vermoegend" },
+			{ "attribute": "verdammt gutaussehende", "description": "bekommt alle ins bett" },
+			{ "attribute": "gewissenhafte", "description": "stellt sich nie gegen seine moral" },
+			{ "attribute": "ruhige", "description": "wirkt immer entspannt" },
+			{ "attribute": "charmante", "description": "ein hervorragender gespraechspartner" },
+			{ "attribute": "beliebte", "description": "jeder will sie/ihn kennen" },
+			{ "attribute": "rechtschaffene", "description": "stellt sich nie gegen seine auftraggeber" },
+			{ "attribute": "freundliche", "description": "kommt in gespraechen schnell ins persoenliche" },
+			{ "attribute": "angesehene", "description": "der ruf eilt vorraus" }
+		],
+		"negativeAttributes": [
+			{ "attribute": "paranoide", "description": "ist aengstlich" },
+			{ "attribute": "unsichere", "description": "ist unsicher" },
+			{ "attribute": "schmaechtige", "description": "sehr schwach" },
+			{ "attribute": "dicke", "description": "eher unbeweglich" },
+			{ "attribute": "eitle", "description": "(r)" },
+			{ "attribute": "blutruenstige", "description": "laesst sich nur vom GEfuehl leiten" },
+			{ "attribute": "gewalttaetige", "description": "laesst sich nur vom gefuehl leiten" },
+			{ "attribute": "wahnsinnige", "description": "laesst sich nur vom gefuehl leiten" },
+			{ "attribute": "tolpatschige", "description": "improvisiert oft, dabei geht viel schief" },
+			{ "attribute": "langweilige", "description": "hat nie einen lustigen spruch auf den lippen" },
+			{ "attribute": "verschwiegene", "description": "redet nicht gern" },
+			{ "attribute": "arme", "description": "ist privat unvermoegend" },
+			{ "attribute": "beziehungsunfaehige", "description": "ist privat unvermoegend" },
+			{ "attribute": "schlampige", "description": "ist happy-go-lucky" },
+			{ "attribute": "staendig nervoese", "description": "wirkt immer angespannt" },
+			{ "attribute": "traumatisierte", "description": "hat ein trauma" },
+			{ "attribute": "unbeliebte", "description": "niemand will sie/ihn kennen" },
+			{ "attribute": "rebellische", "description": "stellt sich stets gegen seine auftraggeber" },
+			{ "attribute": "unfreundliche", "description": "ist verletzend und unhoeflich" },
+			{ "attribute": "skrupellose", "description": "ist verletzend und unhoeflich" },
+			{ "attribute": "rechtsradikale", "description": "ist verletzend und unhoeflich" }
+		],
+		"skills": {
+			"humorNone": [
+				{ "skill": "mitgliedschaft in der russiscHen mafia", "description": "durch seine mitgliedschaft in der russischen mafia kann der taeter tief in ein netzwerk untertauchen und auf etliche ressourcen zurueckgreifen." },
+				{ "skill": "mitgliedschaft bei Den triaden", "description": "durch seine mitgliedschaft bei den triaden muessen die ermittler mit gewalt, die gegen sie ausgefuehrt wird, rechnen." },
+				{ "skill": "mitgliedschaft bei Der yakuza", "description": "durch seine mitgliedschaft bei der yakuza finden sich die ermittler in einem politischen raenkespiel wieder." },
+				{ "skill": "mitgliedschaft in der italieniscHen mafia", "description": "die italienische mafia, welcher der taeter angehoert, verpasst diesem eine neue identitaet." },
+				{ "skill": "hervorrageNde computerkenntnisse", "description": "der taeter ist genaustens ueber jeden schritt der polizei informiert." },
+				{ "skill": "hervorragendE bildung", "description": "MIt seiner hervorragenden BIldung kann der TAeter ein hohes PRofil aufrechterhalten." },
+				{ "skill": "polizeikontakte", "description": "die ermittler finden sich schon bald in einem netz der korruption wieder, da der taeter polizeikontakte hat." },
+				{ "skill": "grosSen reichtum", "description": "geld spielt fuer den taeter keine rolle, und so kauft er sich einen teuren anwalt, sobald er verdaechtigt wird." }
+			],
+			"humorSome": [
+				{ "skill": "mitgliedschaft in der russiscHen mafia", "description": "durch seine mitgliedschaft in der russischen mafia kann der taeter tief in ein netzwerk untertauchen und auf etliche ressourcen zurueckgreifen." },
+				{ "skill": "mitgliedschaft bei Den triaden", "description": "durch seine mitgliedschaft bei den triaden muessen die ermittler mit gewalt, die gegen sie ausgefuehrt wird, rechnen." },
+				{ "skill": "mitgliedschaft bei Der yakuza", "description": "durch seine mitgliedschaft bei der yakuza finden sich die ermittler in einem politischen raenkespiel wieder." },
+				{ "skill": "mitgliedschaft in der italieniscHen mafia", "description": "die italienische mafia, welcher der taeter angehoert, verpasst diesem eine neue identitaet." },
+				{ "skill": "hervorrageNde computerkenntnisse", "description": "der taeter ist genaustens ueber jeden schritt der polizei informiert." },
+				{ "skill": "hervorragendE bildung", "description": "MIt seiner hervorragenden BIldung kann der TAeter ein hohes PRofil aufrechterhalten." },
+				{ "skill": "polizeikontakte", "description": "die ermittler finden sich schon bald in einem netz der korruption wieder, da der taeter polizeikontakte hat." },
+				{ "skill": "grosSen reichtum", "description": "geld spielt fuer den taeter keine rolle, und so kauft er sich einen teuren anwalt, sobald er verdaechtigt wird." }
+			],
+			"humorFull": [
+				{ "skill": "mitgliedschaft in der russiscHen mafia", "description": "durch seine mitgliedschaft in der russischen mafia kann der taeter tief in ein netzwerk untertauchen und auf etliche ressourcen zurueckgreifen." },
+				{ "skill": "mitgliedschaft bei Den triaden", "description": "durch seine mitgliedschaft bei den triaden muessen die ermittler mit gewalt, die gegen sie ausgefuehrt wird, rechnen." },
+				{ "skill": "mitgliedschaft bei Der yakuza", "description": "durch seine mitgliedschaft bei der yakuza finden sich die ermittler in einem politischen raenkespiel wieder." },
+				{ "skill": "mitgliedschaft in der italieniscHen mafia", "description": "die italienische mafia, welcher der taeter angehoert, verpasst diesem eine neue identitaet." },
+				{ "skill": "hervorrageNde computerkenntnisse", "description": "der taeter ist genaustens ueber jeden schritt der polizei informiert." },
+				{ "skill": "hervorragendE bildung", "description": "MIt seiner hervorragenden BIldung kann der TAeter ein hohes PRofil aufrechterhalten." },
+				{ "skill": "polizeikontakte", "description": "die ermittler finden sich schon bald in einem netz der korruption wieder, da der taeter polizeikontakte hat." },
+				{ "skill": "grosSen reichtum", "description": "geld spielt fuer den taeter keine rolle, und so kauft er sich einen teuren anwalt, sobald er verdaechtigt wird." }
+			]
+		},
+		"jobs": {
+			"humorNone": [
+				{ "job": "schmuggler", "description": "USA" },
+				{ "job": "schwerverbrecher", "description": "USA" },
+				{ "job": "hacker", "description": "Europa und USA" },
+				{ "job": "terroristenfuehrer", "description": "EUropa und USA" },
+				{ "job": "faelscher", "description": "USA" },
+				{ "job": "taschendieb", "description": "USA" },
+				{ "job": "psychopath", "description": "USA" },
+				{ "job": "angestellter", "description": "wirklich die ganze" },
+				{ "job": "arbeiter", "description": "wirklich die ganze" },
+				{ "job": "millionaer", "description": "USA" },
+				{ "job": "Zuhaelter", "description": "usA" },
+				{ "job": "drogenhaendler", "description": "uSA" }
+			],
+			"humorSome": [
+				{ "job": "schmuggler", "description": "USA" },
+				{ "job": "schwerverbrecher", "description": "USA" },
+				{ "job": "hacker", "description": "Europa und USA" },
+				{ "job": "terroristenfuehrer", "description": "EUropa und USA" },
+				{ "job": "faelscher", "description": "USA" },
+				{ "job": "taschendieb", "description": "USA" },
+				{ "job": "psychopath", "description": "USA" },
+				{ "job": "angestellter", "description": "wirklich die ganze" },
+				{ "job": "arbeiter", "description": "wirklich die ganze" },
+				{ "job": "millionaer", "description": "USA" },
+				{ "job": "Zuhaelter", "description": "usA" },
+				{ "job": "drogenhaendler", "description": "uSA" }
+			],
+			"humorFull": [
+				{ "job": "schmuggler", "description": "USA" },
+				{ "job": "schwerverbrecher", "description": "USA" },
+				{ "job": "hacker", "description": "Europa und USA" },
+				{ "job": "terroristenfuehrer", "description": "EUropa und USA" },
+				{ "job": "faelscher", "description": "USA" },
+				{ "job": "taschendieb", "description": "USA" },
+				{ "job": "psychopath", "description": "USA" },
+				{ "job": "angestellter", "description": "wirklich die ganze" },
+				{ "job": "arbeiter", "description": "wirklich die ganze" },
+				{ "job": "millionaer", "description": "USA" },
+				{ "job": "Zuhaelter", "description": "usA" },
+				{ "job": "drogenhaendler", "description": "uSA" }
+			]
+		}
+	},
+	"action": {
+		"humorNone": {
+			"method": [
+				{ "name": "eiNen Mord", "description": "europa und USA" },  
+				{ "name": "eIne erpressung", "description": "europa und USA" }, 
+				{ "name": "eineN raubueberfall", "description": "USA" },
+				{ "name": "eineN einbruch", "description": "besitzt ein AUto mit vielen WAffen" },
+				{ "name": "eineN anschlag", "description": "besitzt ein AUto mit vielen WAffen" }
+			],
+			"motiv": [
+				{ "name": "rache", "description": "europa und USA" },
+				{ "name": "hass", "description": "USA" },
+				{ "name": "boshaftigkeit", "description": "USA" },
+				{ "name": "notwehr", "description": "USA" },
+				{ "name": "finanzielleN gruenden", "description": "USA" }
+			]
+		},
+		"humorSome": {
+			"method": [
+				{ "name": "eiNen Mord", "description": "europa und USA" },  
+				{ "name": "eIne erpressung", "description": "europa und USA" }, 
+				{ "name": "eineN raubueberfall", "description": "USA" },
+				{ "name": "eineN einbruch", "description": "besitzt ein AUto mit vielen WAffen" },
+				{ "name": "eineN anschlag", "description": "besitzt ein AUto mit vielen WAffen" }
+			],
+			"motiv": [
+				{ "name": "rache", "description": "europa und USA" },
+				{ "name": "hass", "description": "USA" },
+				{ "name": "boshaftigkeit", "description": "USA" },
+				{ "name": "notwehr", "description": "USA" },
+				{ "name": "finanzielleN gruenden", "description": "USA" }
+			]
+		},
+		"humorFull": {
+			"method": [
+				{ "name": "eiNen Mord", "description": "europa und USA" },  
+				{ "name": "eIne erpressung", "description": "europa und USA" }, 
+				{ "name": "eineN raubueberfall", "description": "USA" },
+				{ "name": "eineN einbruch", "description": "besitzt ein AUto mit vielen WAffen" },
+				{ "name": "eineN anschlag", "description": "besitzt ein AUto mit vielen WAffen" }
+			],
+			"motiv": [
+				{ "name": "rache", "description": "europa und USA" },
+				{ "name": "hass", "description": "USA" },
+				{ "name": "boshaftigkeit", "description": "USA" },
+				{ "name": "notwehr", "description": "USA" },
+				{ "name": "finanzielleN gruenden", "description": "USA" }
+			]
+		}
+	},
+	"targetValues": {
+		"humorNone": [
+			{
+				"name": "New York",
+				"secondaryTargets": [
+					{
+						"name": "Manhattan",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "The Bronx",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Brooklyn",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Queens",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Staten Island",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					}
+				]
+			},
+			{
+				"name": "Washington DC",
+				"secondaryTargets": [
+					{
+						"name": "National Mall",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Georgetown",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Adams-Morgan",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					}
+				]
+			},
+			{
+				"name": "Paris",
+				"secondaryTargets": [
+					{
+						"name": "Quartier latin",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Saint Germain des Pres",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Montparnasse",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Musée du Louvre",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Marais",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Tour Eiffel",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Champs Elysées",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Opera",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Montmartre",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Bastille",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Neully sur Seine",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					}
+				]
+			},
+			{
+				"name": "London",
+				"secondaryTargets": [
+					{
+						"name": "Camden",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Greenwich",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "City of London",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "City of Westminster",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					}
+				]
+			}
+		],
+		"humorSome": [
+			{
+				"name": "New York",
+				"secondaryTargets": [
+					{
+						"name": "Manhattan",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "The Bronx",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Brooklyn",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Queens",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Staten Island",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					}
+				]
+			},
+			{
+				"name": "Washington DC",
+				"secondaryTargets": [
+					{
+						"name": "National Mall",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Georgetown",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Adams-Morgan",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					}
+				]
+			},
+			{
+				"name": "Paris",
+				"secondaryTargets": [
+					{
+						"name": "Quartier latin",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Saint Germain des Pres",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Montparnasse",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Musée du Louvre",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Marais",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Tour Eiffel",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Champs Elysées",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Opera",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Montmartre",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Bastille",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Neully sur Seine",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					}
+				]
+			},
+			{
+				"name": "London",
+				"secondaryTargets": [
+					{
+						"name": "Camden",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Greenwich",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "City of London",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "City of Westminster",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					}
+				]
+			}
+		],
+		"humorFull": [
+			{
+				"name": "New York",
+				"secondaryTargets": [
+					{
+						"name": "Manhattan",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "The Bronx",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Brooklyn",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Queens",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Staten Island",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					}
+				]
+			},
+			{
+				"name": "Washington DC",
+				"secondaryTargets": [
+					{
+						"name": "National Mall",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Georgetown",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Adams-Morgan",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					}
+				]
+			},
+			{
+				"name": "Paris",
+				"secondaryTargets": [
+					{
+						"name": "Quartier latin",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Saint Germain des Pres",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Montparnasse",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Musée du Louvre",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Marais",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Tour Eiffel",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Champs Elysées",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Opera",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Montmartre",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Bastille",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Neully sur Seine",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					}
+				]
+			},
+			{
+				"name": "London",
+				"secondaryTargets": [
+					{
+						"name": "Camden",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "Greenwich",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "City of London",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					},
+					{
+						"name": "City of Westminster",
+						"tertiaryTargets": [
+							"tägliche Streife",
+							"Zuständigkeitsbereich",
+							"Wohnort"
+						]
+					}
+				]
+			}
+		]
+	}
+}
