@@ -5,26 +5,28 @@
 			"some": "ironisch",
 			"full": "parodie"
 		},
-		"violence": [
-			"unbedenklich",
-			"derb",
-			"menschenverachtend"
-		],
-		"erotica": [
-			"prüde",
-			"prickelnd",
-			"unverblümt"
-		],
-		"romance": [
-			"platonisch",
-			"romantisch",
-			"herzerweichend"
-		]
+		"violence": {
+			"unbedenklich": "Der Film verzichtet auf unnötige Gewalt. In Actionszenen versucht der Agent grundsätzlich aus der Situation zu entkommen und handelt stets nur in Notwehr.",
+			"derb": "Der Film zeigt Kampfbewegungen in Zeitlupe. Blut, Schweiss und Feuer sind regelmässig auftauchende Gestaltungselemente.",
+			"menschenverachtend": "Der Film wird schon aufgrund seiner überzogenen Gewaltdarstellung in der Presse zu finden sein. Selbst vor der Darstellung von abgetrennten Gliedmassen, blank liegenden Knochen, schweren Brandverletzungen sowie gezielter Gewaltausübung auf sensible Stellen wie Augen und Zähnen wird nicht zurückgeschreckt."
+		},
+		"erotica": {
+			"prüde": "Darstellung von Sex findet wenn, dann nur in Unterwäsche und unter der Bettdecke statt und niemals länger als unbedingt notwendig.",
+			"prickelnd": "Im Film werden erotische Symbole häufig verwendet. Kommt es zum tatsächlichen Akt, soll die Darstellung desselben für den Zuschauer in jedem Fall ein ästhetisches Erlebnis sein.",
+			"unverblümt": "Der Film wird allein aufgrund seiner offenen Darstellung des Geschlechtsaktes in jedem Fall in der Presse Erwähnung finden. Darstellungen dieser Art gibt es sonst nur im franzprotagonistsichen Programmkino oder im Porno."
+		},
+		"romance": {
+			"platonisch": "Liebe findet nur in den Gedanken des Zuschauers statt. Keiner der Charaktere beginnt eine Beziehung im Film. Alle sind echt gute Freunde, aber mehr auch nicht.",
+			"romantisch": "In vielen Situationen finden die Charaktere des Films sich in romantischen Situationen wieder. Zuschauer kommen nicht umhin, ab und an zu lächeln.",
+			"herzerweichend": "Beim Thema Liebe zielen die Dialoge direkt auf die Tränendrüse. Bebende Unterlippen sind an der Tagesordnung, und im Kino muss man sich auf lautstarkes Schneuzen und Schluchzen als Hintergrundgeräusch einstellen."
+		}
 	},
 	"genders": {
 		"male": {
 			"name": "Mann",
+			"title": "Herr",
 			"a": "ein",
+			"he": "er",
 			"the": "der",
 			"who": "welcher",
 			"their": "seine",
@@ -32,7 +34,9 @@
 		},
 		"female": {
 			"name": "Frau",
+			"title": "Frau",
 			"a": "eine",
+			"he": "sie",
 			"the": "die",
 			"who": "welche",
 			"their": "ihre",
@@ -41,271 +45,273 @@
 	},
 	"protagonistValues": {
 		"name": "",
+		"randomNames": ["Cierra Vega", "Alden Cantrell", "Kierra Gentry", "Pierre Cox", "Thomas Crane", "Miranda Shaffer", "Bradyn Kramer", "Alvaro Mcgee"],
 		"attributesAmount": {
 			"positive": 2,
 			"negative": 2
 		},
 		"positiveAttributes": [
-			{ "attribute": "junge", "description": "geht PRobleme eher intuitiv an" },
-			{ "attribute": "erfahrene", "description": "geht PRobleme eher ueberlegt an" },
-			{ "attribute": "unerschrockene", "description": "hat keine ANgst vor nichts und niemanden" },
+			{ "attribute": "junge", "description": "geht Probleme eher intuitiv an" },
+			{ "attribute": "erfahrene", "description": "geht Probleme eher überlegt an" },
+			{ "attribute": "unerschrockene", "description": "hat keine Angst vor nichts und niemandem" },
 			{ "attribute": "athletische", "description": "ungeheuer beweglich" },
-			{ "attribute": "kuehl denkende", "description": "raeumt EMotionen niemals PLatz ein" },
-			{ "attribute": "routinierte", "description": "probiert nie was aus, sondern kann alles" },
-			{ "attribute": "humorvolle", "description": "hat immer einen lustigen spruch auf den lippen" },
-			{ "attribute": "coole", "description": "weiss wie man auftritt" },
-			{ "attribute": "reiche", "description": "ist privat vermoegend" },
-			{ "attribute": "verdammt gutaussehende", "description": "bekommt alle ins bett" },
-			{ "attribute": "gewissenhafte", "description": "stellt sich nie gegen seine moral" },
+			{ "attribute": "kühl denkende", "description": "räumt Emotionen niemals Platz ein" },
+			{ "attribute": "routinierte", "description": "probiert nie etwas aus, sondern kann alles" },
+			{ "attribute": "humorvolle", "description": "hat immer einen lustigen Spruch auf den Lippen" },
+			{ "attribute": "coole", "description": "weiss, wie man auftritt" },
+			{ "attribute": "reiche", "description": "ist privat vermögend" },
+			{ "attribute": "verdammt gutaussehende", "description": "bekommt alle ins Bett" },
+			{ "attribute": "gewissenhafte", "description": "stellt sich nie gegen seine Moral" },
 			{ "attribute": "ruhige", "description": "wirkt immer entspannt" },
-			{ "attribute": "charmante", "description": "ein hervorragender gespraechspartner" },
+			{ "attribute": "charmante", "description": "ein hervorragender Gesprächspartner" },
 			{ "attribute": "beliebte", "description": "jeder will sie/ihn kennen" },
-			{ "attribute": "rechtschaffene", "description": "stellt sich nie gegen seine auftraggeber" },
-			{ "attribute": "freundliche", "description": "kommt in gespraechen schnell ins persoenliche" },
-			{ "attribute": "angesehene", "description": "der ruf eilt vorraus" }
+			{ "attribute": "rechtschaffene", "description": "stellt sich nie gegen seine Auftraggeber" },
+			{ "attribute": "freundliche", "description": "kommt in Gesprächen schnell ins Persönliche" },
+			{ "attribute": "angesehene", "description": "der Ruf eilt ihr/ihm voraus" }
 		],
 		"negativeAttributes": [
-			{ "attribute": "unerfahrene", "description": "(r)" },
-			{ "attribute": "angsterfuellte", "description": "(r)" },
-			{ "attribute": "unsichere", "description": "(r)" },
-			{ "attribute": "schmaechtige", "description": "(r)" },
-			{ "attribute": "dicke", "description": "(r)" },
-			{ "attribute": "blinde", "description": "(r)" },
-			{ "attribute": "eitle", "description": "(r)" },
-			{ "attribute": "allergische", "description": "(r)" },
-			{ "attribute": "ungestueme", "description": "(r)" },
-			{ "attribute": "tolpatschige", "description": "(r)" },
-			{ "attribute": "bierernste", "description": "(r)" },
-			{ "attribute": "verschwiegene", "description": "(r)" },
-			{ "attribute": "arme", "description": "(r)" },
-			{ "attribute": "beziehungsunfaehige", "description": "(r)" },
-			{ "attribute": "schlampige", "description": "(r)" },
-			{ "attribute": "staendig nervoese", "description": "(r)" },
-			{ "attribute": "traumatisierte", "description": "(r)" },
-			{ "attribute": "unbeliebte", "description": "(r)" },
-			{ "attribute": "rebellische", "description": "(r)" },
-			{ "attribute": "unfreundliche", "description": "(r)" },
-			{ "attribute": "schwangere", "description": "(r)" }
+			{ "attribute": "unerfahrene", "description": "" },
+			{ "attribute": "angsterfüllte", "description": "" },
+			{ "attribute": "unsichere", "description": "" },
+			{ "attribute": "schmächtige", "description": "" },
+			{ "attribute": "dicke", "description": "" },
+			{ "attribute": "blinde", "description": "" },
+			{ "attribute": "eitle", "description": "" },
+			{ "attribute": "allergische", "description": "" },
+			{ "attribute": "ungestüme", "description": "" },
+			{ "attribute": "tollpatschige", "description": "" },
+			{ "attribute": "bierernste", "description": "" },
+			{ "attribute": "verschwiegene", "description": "" },
+			{ "attribute": "arme", "description": "" },
+			{ "attribute": "beziehungsunfähige", "description": "" },
+			{ "attribute": "schlampige", "description": "" },
+			{ "attribute": "ständig nervöse", "description": "" },
+			{ "attribute": "traumatisierte", "description": "" },
+			{ "attribute": "unbeliebte", "description": "" },
+			{ "attribute": "rebellische", "description": "" },
+			{ "attribute": "unfreundliche", "description": "" },
+			{ "attribute": "schwangere", "description": "" }
 		],
 		"skills": {
 			"humorNone": [
-				{ "skill": "privatdetektiv", "description": "DEr PRivatdetektiv springt ueber einen ZAun, um einen GAngster durch diverse GAerten zu verfolgen. BEim VErhoer hofft er auf einen neuen HInweis..." },
-				{ "skill": "streifenpolizist", "description": "DEr STreifenpolizist faehrt dem mutmasslichen TAeter in einer wilden VErfolgungsjagd hinterher." },
-				{ "skill": "kriminalpolizist", "description": "AM TAtort findet der KRiminalpolizist ein winziges DEtail - ein HAar des TAeters." },
-				{ "skill": "gerichtsmediziner", "description": "der gerichtsmediziner findet bei einer obduktion heraus, wie ein mord passiert ist, der mit dem momentanen fall zusammenhaengt." },
-				{ "skill": "anwalt", "description": "DEr ANwalt findet sich selbst in einer gefaehrlichen SItuation, als er in einem dunklen VIertel vor einem GAngster fliehen muss." },
-				{ "skill": "rechtsanwalt", "description": "DEr REchtsanwalt klaert die ERmittler darueber auf, dass sie noch nicht genug BEweise gegen den TAeter in der HAnd haben." }
+				{ "skill": "Privatdetektiv", "description": "Der Privatdetektiv springt über einen Zaun, um einen Gangster durch diverse Gärten zu verfolgen. Beim Verhör hofft er auf einen neuen Hinweis …" },
+				{ "skill": "Streifenpolizist", "description": "Der Streifenpolizist fährt dem mutmaßlichen Täter in einer wilden Verfolgungsjagd hinterher." },
+				{ "skill": "Kriminalpolizist", "description": "Am Tatort findet der Kriminalpolizist ein winziges Detail - ein Haar des Täters." },
+				{ "skill": "Gerichtsmediziner", "description": "Der Gerichtsmediziner findet bei einer Obduktion heraus, wie ein Mord passiert ist, der mit dem momentanen Fall zusammenhängt." },
+				{ "skill": "Anwalt", "description": "Der Anwalt findet sich selbst in einer gefährlichen Situation, als er in einem dunklen Viertel vor einem Gangster fliehen muss." },
+				{ "skill": "Rechtsanwalt", "description": "Der Rechtsanwalt klärt die Ermittler darüber auf, dass sie noch nicht genügend Beweise gegen den Täter in der Hand haben." }
 			],
 			"humorSome": [
-				{ "skill": "privatdetektiv", "description": "DEr PRivatdetektiv springt ueber einen ZAun, um einen GAngster durch diverse GAerten zu verfolgen. BEim VErhoer hofft er auf einen neuen HInweis..." },
-				{ "skill": "streifenpolizist", "description": "DEr STreifenpolizist faehrt dem mutmasslichen TAeter in einer wilden VErfolgungsjagd hinterher." },
-				{ "skill": "kriminalpolizist", "description": "AM TAtort findet der KRiminalpolizist ein winziges DEtail - ein HAar des TAeters." },
-				{ "skill": "gerichtsmediziner", "description": "der gerichtsmediziner findet bei einer obduktion heraus, wie ein mord passiert ist, der mit dem momentanen fall zusammenhaengt." },
-				{ "skill": "anwalt", "description": "DEr ANwalt findet sich selbst in einer gefaehrlichen SItuation, als er in einem dunklen VIertel vor einem GAngster fliehen muss." },
-				{ "skill": "rechtsanwalt", "description": "DEr REchtsanwalt klaert die ERmittler darueber auf, dass sie noch nicht genug BEweise gegen den TAeter in der HAnd haben." }
+				{ "skill": "Privatdetektiv", "description": "Der Privatdetektiv springt über einen Zaun, um einen Gangster durch diverse Gärten zu verfolgen. Beim Verhör hofft er auf einen neuen Hinweis …" },
+				{ "skill": "Streifenpolizist", "description": "Der Streifenpolizist fährt dem mutmaßlichen Täter in einer wilden Verfolgungsjagd hinterher." },
+				{ "skill": "Kriminalpolizist", "description": "Am Tatort findet der Kriminalpolizist ein winziges Detail - ein Haar des Täters." },
+				{ "skill": "Gerichtsmediziner", "description": "Der Gerichtsmediziner findet bei einer Obduktion heraus, wie ein Mord passiert ist, der mit dem momentanen Fall zusammenhängt." },
+				{ "skill": "Anwalt", "description": "Der Anwalt findet sich selbst in einer gefährlichen Situation, als er in einem dunklen Viertel vor einem Gangster fliehen muss." },
+				{ "skill": "Rechtsanwalt", "description": "Der Rechtsanwalt klärt die Ermittler darüber auf, dass sie noch nicht genügend Beweise gegen den Täter in der Hand haben." }
 			],
 			"humorFull": [
-				{ "skill": "privatdetektiv", "description": "DEr PRivatdetektiv springt ueber einen ZAun, um einen GAngster durch diverse GAerten zu verfolgen. BEim VErhoer hofft er auf einen neuen HInweis..." },
-				{ "skill": "streifenpolizist", "description": "DEr STreifenpolizist faehrt dem mutmasslichen TAeter in einer wilden VErfolgungsjagd hinterher." },
-				{ "skill": "kriminalpolizist", "description": "AM TAtort findet der KRiminalpolizist ein winziges DEtail - ein HAar des TAeters." },
-				{ "skill": "gerichtsmediziner", "description": "der gerichtsmediziner findet bei einer obduktion heraus, wie ein mord passiert ist, der mit dem momentanen fall zusammenhaengt." },
-				{ "skill": "anwalt", "description": "DEr ANwalt findet sich selbst in einer gefaehrlichen SItuation, als er in einem dunklen VIertel vor einem GAngster fliehen muss." },
-				{ "skill": "rechtsanwalt", "description": "DEr REchtsanwalt klaert die ERmittler darueber auf, dass sie noch nicht genug BEweise gegen den TAeter in der HAnd haben." }
+				{ "skill": "Privatdetektiv", "description": "Der Privatdetektiv springt über einen Zaun, um einen Gangster durch diverse Gärten zu verfolgen. Beim Verhör hofft er auf einen neuen Hinweis …" },
+				{ "skill": "Streifenpolizist", "description": "Der Streifenpolizist fährt dem mutmaßlichen Täter in einer wilden Verfolgungsjagd hinterher." },
+				{ "skill": "Kriminalpolizist", "description": "Am Tatort findet der Kriminalpolizist ein winziges Detail - ein Haar des Täters." },
+				{ "skill": "Gerichtsmediziner", "description": "Der Gerichtsmediziner findet bei einer Obduktion heraus, wie ein Mord passiert ist, der mit dem momentanen Fall zusammenhängt." },
+				{ "skill": "Anwalt", "description": "Der Anwalt findet sich selbst in einer gefährlichen Situation, als er in einem dunklen Viertel vor einem Gangster fliehen muss." },
+				{ "skill": "Rechtsanwalt", "description": "Der Rechtsanwalt klärt die Ermittler darüber auf, dass sie noch nicht genügend Beweise gegen den Täter in der Hand haben." }
 			]
 		},
 		"jobs": {
 			"humorNone": [
-				{ "job": "deR polizei", "description": "wirklich die ganze" },
-				{ "job": "dEr anwaltskanzlei", "description": "wirklich die ganze" },
-				{ "job": "deR gerichtsmedizin", "description": "wirklich die ganze" },
-				{ "job": "privatdetektiven", "description": "EUropa und USA" }
+				{ "job": "der Polizei", "description": "wirklich die ganze" },
+				{ "job": "der Anwaltskanzlei", "description": "wirklich die ganze" },
+				{ "job": "der Gerichtsmedizin", "description": "wirklich die ganze" },
+				{ "job": "Privatdetektiven", "description": "Europa und USA" }
 			],
 			"humorSome": [
-				{ "job": "deR polizei", "description": "wirklich die ganze" },
-				{ "job": "dEr anwaltskanzlei", "description": "wirklich die ganze" },
-				{ "job": "deR gerichtsmedizin", "description": "wirklich die ganze" },
-				{ "job": "privatdetektiven", "description": "EUropa und USA" }
+				{ "job": "der Polizei", "description": "wirklich die ganze" },
+				{ "job": "der Anwaltskanzlei", "description": "wirklich die ganze" },
+				{ "job": "der Gerichtsmedizin", "description": "wirklich die ganze" },
+				{ "job": "Privatdetektiven", "description": "Europa und USA" }
 			],
 			"humorFull": [
-				{ "job": "deR polizei", "description": "wirklich die ganze" },
-				{ "job": "dEr anwaltskanzlei", "description": "wirklich die ganze" },
-				{ "job": "deR gerichtsmedizin", "description": "wirklich die ganze" },
-				{ "job": "privatdetektiven", "description": "EUropa und USA" }
+				{ "job": "der Polizei", "description": "wirklich die ganze" },
+				{ "job": "der Anwaltskanzlei", "description": "wirklich die ganze" },
+				{ "job": "der Gerichtsmedizin", "description": "wirklich die ganze" },
+				{ "job": "Privatdetektiven", "description": "Europa und USA" }
 			]
 		}
 	},
 	"antagonistValues": {
 		"name": "",
+		"randomNames": ["Taylor Marquez", "Jamie Nguyen", "Waylon Hopkins", "Yasmine Pham", "Atticus Yoder", "Cassius Stout", "Kira Hanson", "Kayden Norris", "Jayden Wiley", "Isai Garza", "Gage Donovan", "Ashlynn Baldwin"],
 		"attributesAmount": {
 			"positive": 3,
 			"negative": 3
 		},
 		"positiveAttributes": [
-			{ "attribute": "junge", "description": "geht PRobleme eher intuitiv an" },
-			{ "attribute": "erfahrene", "description": "geht PRobleme eher ueberlegt an" },
-			{ "attribute": "unerschrockene", "description": "hat keine ANgst vor nichts und niemanden" },
+			{ "attribute": "junge", "description": "geht Probleme eher intuitiv an" },
+			{ "attribute": "erfahrene", "description": "geht Probleme eher überlegt an" },
+			{ "attribute": "unerschrockene", "description": "hat keine Angst vor nichts und niemandem" },
 			{ "attribute": "athletische", "description": "ungeheuer beweglich" },
-			{ "attribute": "kuehl denkende", "description": "raeumt EMotionen niemals PLatz ein" },
-			{ "attribute": "routinierte", "description": "probiert nie was aus, sondern kann alles" },
-			{ "attribute": "humorvolle", "description": "hat immer einen lustigen spruch auf den lippen" },
-			{ "attribute": "coole", "description": "weiss wie man auftritt" },
-			{ "attribute": "reiche", "description": "ist privat vermoegend" },
-			{ "attribute": "verdammt gutaussehende", "description": "bekommt alle ins bett" },
-			{ "attribute": "gewissenhafte", "description": "stellt sich nie gegen seine moral" },
+			{ "attribute": "kühl denkende", "description": "räumt Emotionen niemals Platz ein" },
+			{ "attribute": "routinierte", "description": "probiert nie etwas aus, sondern kann alles" },
+			{ "attribute": "humorvolle", "description": "hat immer einen lustigen Spruch auf den Lippen" },
+			{ "attribute": "coole", "description": "weiss, wie man auftritt" },
+			{ "attribute": "reiche", "description": "ist privat vermögend" },
+			{ "attribute": "verdammt gutaussehende", "description": "bekommt alle ins Bett" },
+			{ "attribute": "gewissenhafte", "description": "stellt sich nie gegen seine Moral" },
 			{ "attribute": "ruhige", "description": "wirkt immer entspannt" },
-			{ "attribute": "charmante", "description": "ein hervorragender gespraechspartner" },
+			{ "attribute": "charmante", "description": "ein hervorragender Gesprächspartner" },
 			{ "attribute": "beliebte", "description": "jeder will sie/ihn kennen" },
-			{ "attribute": "rechtschaffene", "description": "stellt sich nie gegen seine auftraggeber" },
-			{ "attribute": "freundliche", "description": "kommt in gespraechen schnell ins persoenliche" },
-			{ "attribute": "angesehene", "description": "der ruf eilt vorraus" }
+			{ "attribute": "rechtschaffene", "description": "stellt sich nie gegen seine Auftraggeber" },
+			{ "attribute": "freundliche", "description": "kommt in Gesprächen schnell ins Persönliche" },
+			{ "attribute": "angesehene", "description": "der Ruf eilt ihr/ihm voraus" }
 		],
 		"negativeAttributes": [
-			{ "attribute": "paranoide", "description": "ist aengstlich" },
+			{ "attribute": "paranoide", "description": "ist ängstlich" },
 			{ "attribute": "unsichere", "description": "ist unsicher" },
-			{ "attribute": "schmaechtige", "description": "sehr schwach" },
+			{ "attribute": "schmächtige", "description": "sehr schwach" },
 			{ "attribute": "dicke", "description": "eher unbeweglich" },
-			{ "attribute": "eitle", "description": "(r)" },
-			{ "attribute": "blutruenstige", "description": "laesst sich nur vom GEfuehl leiten" },
-			{ "attribute": "gewalttaetige", "description": "laesst sich nur vom gefuehl leiten" },
-			{ "attribute": "wahnsinnige", "description": "laesst sich nur vom gefuehl leiten" },
-			{ "attribute": "tolpatschige", "description": "improvisiert oft, dabei geht viel schief" },
-			{ "attribute": "langweilige", "description": "hat nie einen lustigen spruch auf den lippen" },
+			{ "attribute": "eitle", "description": "" },
+			{ "attribute": "blutrünstige", "description": "lässt sich nur vom Gefühl leiten" },
+			{ "attribute": "gewalttätige", "description": "lässt sich nur vom Gefühl leiten" },
+			{ "attribute": "wahnsinnige", "description": "lässt sich nur vom Gefühl leiten" },
+			{ "attribute": "tollpatschige", "description": "improvisiert oft, dabei geht viel schief" },
+			{ "attribute": "langweilige", "description": "hat nie einen lustigen Spruch auf den Lippen" },
 			{ "attribute": "verschwiegene", "description": "redet nicht gern" },
-			{ "attribute": "arme", "description": "ist privat unvermoegend" },
-			{ "attribute": "beziehungsunfaehige", "description": "ist privat unvermoegend" },
+			{ "attribute": "arme", "description": "ist privat unvermögend" },
+			{ "attribute": "beziehungsunfähige", "description": "ist emotional sehr wechselhaft" },
 			{ "attribute": "schlampige", "description": "ist happy-go-lucky" },
-			{ "attribute": "staendig nervoese", "description": "wirkt immer angespannt" },
-			{ "attribute": "traumatisierte", "description": "hat ein trauma" },
+			{ "attribute": "ständig nervöse", "description": "wirkt immer angespannt" },
+			{ "attribute": "traumatisierte", "description": "hat ein Trauma" },
 			{ "attribute": "unbeliebte", "description": "niemand will sie/ihn kennen" },
-			{ "attribute": "rebellische", "description": "stellt sich stets gegen seine auftraggeber" },
-			{ "attribute": "unfreundliche", "description": "ist verletzend und unhoeflich" },
-			{ "attribute": "skrupellose", "description": "ist verletzend und unhoeflich" },
-			{ "attribute": "rechtsradikale", "description": "ist verletzend und unhoeflich" }
+			{ "attribute": "rebellische", "description": "stellt sich stets gegen seine Auftraggeber" },
+			{ "attribute": "unfreundliche", "description": "ist verletzend und unhöflich" },
+			{ "attribute": "skrupellose", "description": "ist verletzend und unhöflich" },
+			{ "attribute": "rechtsradikale", "description": "ist verletzend und unhöflich" }
 		],
 		"skills": {
 			"humorNone": [
-				{ "skill": "mitgliedschaft in der russiscHen mafia", "description": "durch seine mitgliedschaft in der russischen mafia kann der taeter tief in ein netzwerk untertauchen und auf etliche ressourcen zurueckgreifen." },
-				{ "skill": "mitgliedschaft bei Den triaden", "description": "durch seine mitgliedschaft bei den triaden muessen die ermittler mit gewalt, die gegen sie ausgefuehrt wird, rechnen." },
-				{ "skill": "mitgliedschaft bei Der yakuza", "description": "durch seine mitgliedschaft bei der yakuza finden sich die ermittler in einem politischen raenkespiel wieder." },
-				{ "skill": "mitgliedschaft in der italieniscHen mafia", "description": "die italienische mafia, welcher der taeter angehoert, verpasst diesem eine neue identitaet." },
-				{ "skill": "hervorrageNde computerkenntnisse", "description": "der taeter ist genaustens ueber jeden schritt der polizei informiert." },
-				{ "skill": "hervorragendE bildung", "description": "MIt seiner hervorragenden BIldung kann der TAeter ein hohes PRofil aufrechterhalten." },
-				{ "skill": "polizeikontakte", "description": "die ermittler finden sich schon bald in einem netz der korruption wieder, da der taeter polizeikontakte hat." },
-				{ "skill": "grosSen reichtum", "description": "geld spielt fuer den taeter keine rolle, und so kauft er sich einen teuren anwalt, sobald er verdaechtigt wird." }
+				{ "skill": "Mitgliedschaft in der russiscHen Mafia", "description": "Durch seine Mitgliedschaft in der russischen Mafia kann der Täter tief in ein Netzwerk untertauchen und auf etliche Ressourcen zurückgreifen." },
+				{ "skill": "Mitgliedschaft bei den Triaden", "description": "Durch seine Mitgliedschaft bei den Triaden müssen die Ermittler mit Gewalt, die gegen sie ausgeführt wird, rechnen." },
+				{ "skill": "Mitgliedschaft bei der Yakuza", "description": "Durch seine Mitgliedschaft bei der Yakuza finden sich die Ermittler in einem politischen Ränkespiel wieder." },
+				{ "skill": "Mitgliedschaft in der italieniscHen Mafia", "description": "Die italienische Mafia, welcher der Täter angehört, verpasst diesem eine neue Identität." },
+				{ "skill": "hervorragende Computerkenntnisse", "description": "Der Täter ist genaustens über jeden Schritt der Polizei informiert." },
+				{ "skill": "hervorragende Bildung", "description": "Mit seiner hervorragenden Bildung kann der Täter ein hohes Profil aufrechterhalten." },
+				{ "skill": "Polizeikontakte", "description": "Die Ermittler finden sich schon bald in einem Netz der Korruption wieder, da der Täter Polizeikontakte hat." },
+				{ "skill": "großen Reichtum", "description": "Geld spielt für den Täter keine Rolle, und so heuert er umgehend einen teuren Anwalt an, sobald er verdächtigt wird." }
 			],
 			"humorSome": [
-				{ "skill": "mitgliedschaft in der russiscHen mafia", "description": "durch seine mitgliedschaft in der russischen mafia kann der taeter tief in ein netzwerk untertauchen und auf etliche ressourcen zurueckgreifen." },
-				{ "skill": "mitgliedschaft bei Den triaden", "description": "durch seine mitgliedschaft bei den triaden muessen die ermittler mit gewalt, die gegen sie ausgefuehrt wird, rechnen." },
-				{ "skill": "mitgliedschaft bei Der yakuza", "description": "durch seine mitgliedschaft bei der yakuza finden sich die ermittler in einem politischen raenkespiel wieder." },
-				{ "skill": "mitgliedschaft in der italieniscHen mafia", "description": "die italienische mafia, welcher der taeter angehoert, verpasst diesem eine neue identitaet." },
-				{ "skill": "hervorrageNde computerkenntnisse", "description": "der taeter ist genaustens ueber jeden schritt der polizei informiert." },
-				{ "skill": "hervorragendE bildung", "description": "MIt seiner hervorragenden BIldung kann der TAeter ein hohes PRofil aufrechterhalten." },
-				{ "skill": "polizeikontakte", "description": "die ermittler finden sich schon bald in einem netz der korruption wieder, da der taeter polizeikontakte hat." },
-				{ "skill": "grosSen reichtum", "description": "geld spielt fuer den taeter keine rolle, und so kauft er sich einen teuren anwalt, sobald er verdaechtigt wird." }
+				{ "skill": "Mitgliedschaft in der russiscHen Mafia", "description": "Durch seine Mitgliedschaft in der russischen Mafia kann der Täter tief in ein Netzwerk untertauchen und auf etliche Ressourcen zurückgreifen." },
+				{ "skill": "Mitgliedschaft bei den Triaden", "description": "Durch seine Mitgliedschaft bei den Triaden müssen die Ermittler mit Gewalt, die gegen sie ausgeführt wird, rechnen." },
+				{ "skill": "Mitgliedschaft bei der Yakuza", "description": "Durch seine Mitgliedschaft bei der Yakuza finden sich die Ermittler in einem politischen Ränkespiel wieder." },
+				{ "skill": "Mitgliedschaft in der italieniscHen Mafia", "description": "Die italienische Mafia, welcher der Täter angehört, verpasst diesem eine neue Identität." },
+				{ "skill": "hervorragende Computerkenntnisse", "description": "Der Täter ist genaustens über jeden Schritt der Polizei informiert." },
+				{ "skill": "hervorragende Bildung", "description": "Mit seiner hervorragenden Bildung kann der Täter ein hohes Profil aufrechterhalten." },
+				{ "skill": "Polizeikontakte", "description": "Die Ermittler finden sich schon bald in einem Netz der Korruption wieder, da der Täter Polizeikontakte hat." },
+				{ "skill": "großen Reichtum", "description": "Geld spielt für den Täter keine Rolle, und so heuert er umgehend einen teuren Anwalt an, sobald er verdächtigt wird." }
 			],
 			"humorFull": [
-				{ "skill": "mitgliedschaft in der russiscHen mafia", "description": "durch seine mitgliedschaft in der russischen mafia kann der taeter tief in ein netzwerk untertauchen und auf etliche ressourcen zurueckgreifen." },
-				{ "skill": "mitgliedschaft bei Den triaden", "description": "durch seine mitgliedschaft bei den triaden muessen die ermittler mit gewalt, die gegen sie ausgefuehrt wird, rechnen." },
-				{ "skill": "mitgliedschaft bei Der yakuza", "description": "durch seine mitgliedschaft bei der yakuza finden sich die ermittler in einem politischen raenkespiel wieder." },
-				{ "skill": "mitgliedschaft in der italieniscHen mafia", "description": "die italienische mafia, welcher der taeter angehoert, verpasst diesem eine neue identitaet." },
-				{ "skill": "hervorrageNde computerkenntnisse", "description": "der taeter ist genaustens ueber jeden schritt der polizei informiert." },
-				{ "skill": "hervorragendE bildung", "description": "MIt seiner hervorragenden BIldung kann der TAeter ein hohes PRofil aufrechterhalten." },
-				{ "skill": "polizeikontakte", "description": "die ermittler finden sich schon bald in einem netz der korruption wieder, da der taeter polizeikontakte hat." },
-				{ "skill": "grosSen reichtum", "description": "geld spielt fuer den taeter keine rolle, und so kauft er sich einen teuren anwalt, sobald er verdaechtigt wird." }
+				{ "skill": "Mitgliedschaft in der russiscHen Mafia", "description": "Durch seine Mitgliedschaft in der russischen Mafia kann der Täter tief in ein Netzwerk untertauchen und auf etliche Ressourcen zurückgreifen." },
+				{ "skill": "Mitgliedschaft bei den Triaden", "description": "Durch seine Mitgliedschaft bei den Triaden müssen die Ermittler mit Gewalt, die gegen sie ausgeführt wird, rechnen." },
+				{ "skill": "Mitgliedschaft bei der Yakuza", "description": "Durch seine Mitgliedschaft bei der Yakuza finden sich die Ermittler in einem politischen Ränkespiel wieder." },
+				{ "skill": "Mitgliedschaft in der italieniscHen Mafia", "description": "Die italienische Mafia, welcher der Täter angehört, verpasst diesem eine neue Identität." },
+				{ "skill": "hervorragende Computerkenntnisse", "description": "Der Täter ist genaustens über jeden Schritt der Polizei informiert." },
+				{ "skill": "hervorragende Bildung", "description": "Mit seiner hervorragenden Bildung kann der Täter ein hohes Profil aufrechterhalten." },
+				{ "skill": "Polizeikontakte", "description": "Die Ermittler finden sich schon bald in einem Netz der Korruption wieder, da der Täter Polizeikontakte hat." },
+				{ "skill": "großen Reichtum", "description": "Geld spielt für den Täter keine Rolle, und so heuert er umgehend einen teuren Anwalt an, sobald er verdächtigt wird." }
 			]
 		},
 		"jobs": {
 			"humorNone": [
-				{ "job": "schmuggler", "description": "USA" },
-				{ "job": "schwerverbrecher", "description": "USA" },
-				{ "job": "hacker", "description": "Europa und USA" },
-				{ "job": "terroristenfuehrer", "description": "EUropa und USA" },
-				{ "job": "faelscher", "description": "USA" },
-				{ "job": "taschendieb", "description": "USA" },
-				{ "job": "psychopath", "description": "USA" },
-				{ "job": "angestellter", "description": "wirklich die ganze" },
-				{ "job": "arbeiter", "description": "wirklich die ganze" },
-				{ "job": "millionaer", "description": "USA" },
-				{ "job": "Zuhaelter", "description": "usA" },
-				{ "job": "drogenhaendler", "description": "uSA" }
+				{ "job": "Schmuggler", "description": "USA" },
+				{ "job": "Dchwerverbrecher", "description": "USA" },
+				{ "job": "Hacker", "description": "Europa und USA" },
+				{ "job": "Terroristenführer", "description": "Europa und USA" },
+				{ "job": "Fälscher", "description": "USA" },
+				{ "job": "Taschendieb", "description": "USA" },
+				{ "job": "Psychopath", "description": "USA" },
+				{ "job": "Angestellter", "description": "wirklich die ganze" },
+				{ "job": "Arbeiter", "description": "wirklich die ganze" },
+				{ "job": "Millionär", "description": "USA" },
+				{ "job": "Zuhälter", "description": "USA" },
+				{ "job": "Drogenhändler", "description": "USA" }
 			],
 			"humorSome": [
-				{ "job": "schmuggler", "description": "USA" },
-				{ "job": "schwerverbrecher", "description": "USA" },
-				{ "job": "hacker", "description": "Europa und USA" },
-				{ "job": "terroristenfuehrer", "description": "EUropa und USA" },
-				{ "job": "faelscher", "description": "USA" },
-				{ "job": "taschendieb", "description": "USA" },
-				{ "job": "psychopath", "description": "USA" },
-				{ "job": "angestellter", "description": "wirklich die ganze" },
-				{ "job": "arbeiter", "description": "wirklich die ganze" },
-				{ "job": "millionaer", "description": "USA" },
-				{ "job": "Zuhaelter", "description": "usA" },
-				{ "job": "drogenhaendler", "description": "uSA" }
+				{ "job": "Schmuggler", "description": "USA" },
+				{ "job": "Dchwerverbrecher", "description": "USA" },
+				{ "job": "Hacker", "description": "Europa und USA" },
+				{ "job": "Terroristenführer", "description": "Europa und USA" },
+				{ "job": "Fälscher", "description": "USA" },
+				{ "job": "Taschendieb", "description": "USA" },
+				{ "job": "Psychopath", "description": "USA" },
+				{ "job": "Angestellter", "description": "wirklich die ganze" },
+				{ "job": "Arbeiter", "description": "wirklich die ganze" },
+				{ "job": "Millionär", "description": "USA" },
+				{ "job": "Zuhälter", "description": "USA" },
+				{ "job": "Drogenhändler", "description": "USA" }
 			],
 			"humorFull": [
-				{ "job": "schmuggler", "description": "USA" },
-				{ "job": "schwerverbrecher", "description": "USA" },
-				{ "job": "hacker", "description": "Europa und USA" },
-				{ "job": "terroristenfuehrer", "description": "EUropa und USA" },
-				{ "job": "faelscher", "description": "USA" },
-				{ "job": "taschendieb", "description": "USA" },
-				{ "job": "psychopath", "description": "USA" },
-				{ "job": "angestellter", "description": "wirklich die ganze" },
-				{ "job": "arbeiter", "description": "wirklich die ganze" },
-				{ "job": "millionaer", "description": "USA" },
-				{ "job": "Zuhaelter", "description": "usA" },
-				{ "job": "drogenhaendler", "description": "uSA" }
+				{ "job": "Schmuggler", "description": "USA" },
+				{ "job": "Dchwerverbrecher", "description": "USA" },
+				{ "job": "Hacker", "description": "Europa und USA" },
+				{ "job": "Terroristenführer", "description": "Europa und USA" },
+				{ "job": "Fälscher", "description": "USA" },
+				{ "job": "Taschendieb", "description": "USA" },
+				{ "job": "Psychopath", "description": "USA" },
+				{ "job": "Angestellter", "description": "wirklich die ganze" },
+				{ "job": "Arbeiter", "description": "wirklich die ganze" },
+				{ "job": "Millionär", "description": "USA" },
+				{ "job": "Zuhälter", "description": "USA" },
+				{ "job": "Drogenhändler", "description": "USA" }
 			]
 		}
 	},
 	"action": {
 		"humorNone": {
 			"method": [
-				{ "name": "eiNen Mord", "description": "europa und USA" },  
-				{ "name": "eIne erpressung", "description": "europa und USA" }, 
-				{ "name": "eineN raubueberfall", "description": "USA" },
-				{ "name": "eineN einbruch", "description": "besitzt ein AUto mit vielen WAffen" },
-				{ "name": "eineN anschlag", "description": "besitzt ein AUto mit vielen WAffen" }
+				{ "name": "einen Mord", "description": "Europa und USA" },  
+				{ "name": "eine Erpressung", "description": "Europa und USA" }, 
+				{ "name": "einen Raubüberfall", "description": "USA" },
+				{ "name": "einen Einbruch", "description": "besitzt ein Auto mit vielen Waffen" },
+				{ "name": "einen Anschlag", "description": "besitzt ein Auto mit vielen Waffen" }
 			],
 			"motiv": [
-				{ "name": "rache", "description": "europa und USA" },
-				{ "name": "hass", "description": "USA" },
-				{ "name": "boshaftigkeit", "description": "USA" },
-				{ "name": "notwehr", "description": "USA" },
-				{ "name": "finanzielleN gruenden", "description": "USA" }
+				{ "name": "Rache", "description": "Europa und USA" },
+				{ "name": "Hass", "description": "USA" },
+				{ "name": "Boshaftigkeit", "description": "USA" },
+				{ "name": "Notwehr", "description": "USA" },
+				{ "name": "finanziellen Gründen", "description": "USA" }
 			]
 		},
 		"humorSome": {
 			"method": [
-				{ "name": "eiNen Mord", "description": "europa und USA" },  
-				{ "name": "eIne erpressung", "description": "europa und USA" }, 
-				{ "name": "eineN raubueberfall", "description": "USA" },
-				{ "name": "eineN einbruch", "description": "besitzt ein AUto mit vielen WAffen" },
-				{ "name": "eineN anschlag", "description": "besitzt ein AUto mit vielen WAffen" }
+				{ "name": "einen Mord", "description": "Europa und USA" },  
+				{ "name": "eine Erpressung", "description": "Europa und USA" }, 
+				{ "name": "einen Raubüberfall", "description": "USA" },
+				{ "name": "einen Einbruch", "description": "besitzt ein Auto mit vielen Waffen" },
+				{ "name": "einen Anschlag", "description": "besitzt ein Auto mit vielen Waffen" }
 			],
 			"motiv": [
-				{ "name": "rache", "description": "europa und USA" },
-				{ "name": "hass", "description": "USA" },
-				{ "name": "boshaftigkeit", "description": "USA" },
-				{ "name": "notwehr", "description": "USA" },
-				{ "name": "finanzielleN gruenden", "description": "USA" }
+				{ "name": "Rache", "description": "Europa und USA" },
+				{ "name": "Hass", "description": "USA" },
+				{ "name": "Boshaftigkeit", "description": "USA" },
+				{ "name": "Notwehr", "description": "USA" },
+				{ "name": "finanziellen Gründen", "description": "USA" }
 			]
 		},
 		"humorFull": {
 			"method": [
-				{ "name": "eiNen Mord", "description": "europa und USA" },  
-				{ "name": "eIne erpressung", "description": "europa und USA" }, 
-				{ "name": "eineN raubueberfall", "description": "USA" },
-				{ "name": "eineN einbruch", "description": "besitzt ein AUto mit vielen WAffen" },
-				{ "name": "eineN anschlag", "description": "besitzt ein AUto mit vielen WAffen" }
+				{ "name": "einen Mord", "description": "Europa und USA" },  
+				{ "name": "eine Erpressung", "description": "Europa und USA" }, 
+				{ "name": "einen Raubüberfall", "description": "USA" },
+				{ "name": "einen Einbruch", "description": "besitzt ein Auto mit vielen Waffen" },
+				{ "name": "einen Anschlag", "description": "besitzt ein Auto mit vielen Waffen" }
 			],
 			"motiv": [
-				{ "name": "rache", "description": "europa und USA" },
-				{ "name": "hass", "description": "USA" },
-				{ "name": "boshaftigkeit", "description": "USA" },
-				{ "name": "notwehr", "description": "USA" },
-				{ "name": "finanzielleN gruenden", "description": "USA" }
+				{ "name": "Rache", "description": "Europa und USA" },
+				{ "name": "Hass", "description": "USA" },
+				{ "name": "Boshaftigkeit", "description": "USA" },
+				{ "name": "Notwehr", "description": "USA" },
+				{ "name": "finanziellen Gründen", "description": "USA" }
 			]
 		}
 	},
@@ -928,5 +934,8 @@
 				]
 			}
 		]
+	},
+	"story": {
+
 	}
 }
