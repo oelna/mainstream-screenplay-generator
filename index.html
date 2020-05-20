@@ -166,13 +166,13 @@
 						<option v-for="tertiaryTarget, key in content.targetValues[humorSetting][primaryTarget].secondaryTargets[secondaryTarget].tertiaryTargets" :key="key" :value="key">{{ tertiaryTarget }}</option>
 					</select>
 
-					von Protagonist <span v-if="protagonists[0]">{{ protagonists[0].name }}</span><span v-else>X</span> und seine Leute von 
+					von Protagonist <span v-if="protagonists[0]">{{ ucfirst(protagonists[0].name) }}</span><span v-else>X</span>.<br /><br /><span v-if="protagonists[0]">{{ ucfirst(protagonists[0].name) }}</span><span v-else>X</span> und seine Leute von 
 
 					<select class="protagonist-job" ref="r-protagonist-job">
 						<option v-for="job, key in content.protagonistValues.jobs[humorSetting]" :key="key" :value="key" :data-description="job.description">{{ job.job }}</option>
 					</select>
 
-					suchen Antagonist <span v-if="antagonists[0]">{{ antagonists[0].name }}</span><span v-else>X</span>, da diese(r)
+					suchen Antagonist <span v-if="antagonists[0]">{{ ucfirst(antagonists[0].name) }}</span><span v-else>X</span>, da diese(r)
 
 					<select class="antagonist-method" ref="r-antagonist-method">
 						<option v-for="method, key in content.action[humorSetting].method" :key="key" :value="key" :data-description="method.description">{{ method.name }}</option>
@@ -184,7 +184,7 @@
 
 					verübt hat.
 
-					<input type="submit" name="Generate" @click.prevent="generateScreenplay()" />
+					<input type="submit" name="generate" value="Generieren" @click.prevent="generateScreenplay()" />
 
 				</fieldset>
 			</form>
@@ -222,7 +222,7 @@
 						return 'humor' + this.humorSetting.charAt(0).toUpperCase() + this.humorSetting.slice(1);
 					},
 					'changeTarget': function (type, event) {
-						console.log(type, event.target.value);
+						// console.log(type, event.target.value);
 						this[type + 'Target'] = event.target.value;
 					},
 					'setCharacterName': function (character, index, event) {
@@ -402,6 +402,8 @@
 
 						// output
 						story.text = storyString;
+
+						story.$el.scrollIntoView({behavior: 'smooth'});
 					}
 				}
 			});
