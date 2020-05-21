@@ -47,9 +47,12 @@ body { margin: 0.8em; }
 
 fieldset {
 	margin: 0;
-	margin-bottom: 1em;
 	border: 0px dashed var(--system-color-gray-3);
 	background-color: var(--system-color-background);
+}
+
+fieldset + fieldset {
+	margin-top: 1em;
 }
 
 h2 {
