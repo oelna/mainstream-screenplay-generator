@@ -1,0 +1,149 @@
+:root {
+	color-scheme: light dark;
+
+	--system-color-type: rgba(25,25,25,1);
+	--system-color-background: rgba(240,240,240,1);
+	--system-color-gray-1: rgba(225,225,220,1);
+	--system-color-gray-2: rgba(185,185,180,1);
+	--system-color-gray-3: rgba(105,105,105,1);
+}
+
+* {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+
+html {
+	font: 100%/1.6 system-ui, Arial, sans-serif;
+
+	background-color: var(--system-color-gray-2);
+    color: var(--system-color-type);
+}
+
+body { margin: 0.8em; }
+
+#container {
+	display: flex;
+	flex-direction: column;
+	max-width: 68rem;
+	margin: 0 auto;
+}
+
+#container #app,
+#container #story {
+	width: 100%;
+}
+
+fieldset {
+	margin: 0;
+	margin-bottom: 1em;
+	border: 0px dashed var(--system-color-gray-3);
+	background-color: var(--system-color-background);
+}
+
+h2 {
+	margin: 0 0 0.5em 0;
+}
+
+input[type="text"] {
+	display: inline-block;
+	width: 80%;
+	padding: 0.25em;
+	background-color: var(--system-color-gray-1);
+	color: var(--system-color-text);
+	border: 1px solid var(--system-color-gray-3);
+}
+
+select {
+	display: block;
+	width: 80%;
+	margin-bottom: 0.5em;
+	padding: 0.25em;
+	background-color: var(--system-color-gray-1);
+	color: var(--system-color-text);
+}
+
+.settings > div {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.settings > div > * {
+	width: calc((80% - 2em) / 2);
+	margin-right: 2em;
+}
+
+.settings > #logo {
+	width: 80%;
+	height: 12em;
+	background: url(./msg-logo-light.png) center center no-repeat;
+	background-size: contain;
+}
+
+.settings select {
+	width: 100%;
+}
+
+input[type="submit"] {
+	display: block;
+	width: 80%;
+	background: var(--system-color-gray-3);
+	padding: 0.5em 0.25em 0.6em;
+	color: var(--system-color-background);
+	border: 0;
+	border-radius: 0.4em;
+}
+
+#story {
+	font-size: 1.25em;
+	font-family: monospace;
+	padding: 1rem;
+	border: 0px dashed var(--system-color-gray-3);
+	background-color: var(--system-color-background);
+}
+
+#story h2 { margin-bottom: 0; }
+#story p { margin-top: 0; }
+
+#story p + h2 {
+	margin-top: 1.25em;
+	border-top: 1px solid var(--system-color-gray-1);
+	padding-top: 1.25em;
+}
+
+@media all and (min-width: 50em) {
+	#container {
+		flex-direction: row;
+	}
+
+	#container #app,
+	#container #story {
+		width: calc(50% - 0.5em);
+	}
+
+	#container #app {
+		margin-right: 1em;
+	}
+
+	input[type="text"],
+	input[type="submit"],
+	select {
+		width: 30ch;
+	}
+}
+
+@media (prefers-color-scheme: light) {}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --system-color-type: rgba(190,190,190,1);
+		--system-color-background: rgba(50,50,50,1);
+		--system-color-gray-1: rgba(92,92,90,1);
+		--system-color-gray-2: rgba(25,25,25,1);
+		--system-color-gray-3: rgba(125,125,125,1);
+	}
+
+	.settings > #logo {
+		background-image: url(./msg-logo-dark.png);
+	}
+}
