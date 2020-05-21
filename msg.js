@@ -31,7 +31,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
 			// no localStorage, detect OS setting
 			if (currentTheme === null) {
-				console.log('detecting');
 				if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 					document.documentElement.setAttribute('data-theme', 'dark');
 					this.themeSwitch = true;

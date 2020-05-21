@@ -30,7 +30,9 @@
 						<label id="theme"><input type="checkbox" id="theme-switch" @click="toggleTheme" v-model="themeSwitch" /><span></span></label>
 					</nav>
 
-					<div id="logo"></div>
+					<div id="logo">
+						<object type="image/svg+xml" :data="(themeSwitch) ? './msg-logo.svg?theme=dark' : './msg-logo.svg?theme=light'" width="61" height="21"></object>
+					</div>
 
 					<h2>Grundwerte</h2>
 					<div>
