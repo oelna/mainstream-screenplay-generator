@@ -1,4 +1,13 @@
 window.addEventListener('DOMContentLoaded', function () {
+
+	window.matchMedia('(prefers-color-scheme: dark)').addListener(function (event) { 
+		// automatically match OS setting if no user preference is saved
+		if (!localStorage.getItem('theme')) {
+			app.themeSwitch = event.matches;
+			document.documentElement.setAttribute('data-theme', event.matches ? 'dark' : 'light');
+		}
+	});
+
 	const story = new Vue({
 	'el': '#story',
 	'data': {
@@ -8,6 +17,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	const app = new Vue({
 		'el': '#app',
 		'data': {
+			'themeSwitch': false,
 			'content': {},
 			'humorSetting': 'humorNone',
 			'protagonists': [],
@@ -15,7 +25,41 @@ window.addEventListener('DOMContentLoaded', function () {
 			'primaryTarget': 0,
 			'secondaryTarget': 0
 		},
+		'created': function () {
+			// light/dark theme switch
+			const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+			// no localStorage, detect OS setting
+			if (currentTheme === null) {
+				console.log('detecting');
+				if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					document.documentElement.setAttribute('data-theme', 'dark');
+					this.themeSwitch = true;
+				} else {
+					document.documentElement.setAttribute('data-theme', 'light');
+				}
+			}
+
+			// prefer localStorage preference, if present
+			if (currentTheme) {
+				document.documentElement.setAttribute('data-theme', currentTheme);
+
+				if (currentTheme === 'dark') {
+					this.themeSwitch = true;
+				}
+			}
+		},
 		'methods': {
+			'toggleTheme': function (event) {
+				if (event.target.checked) {
+					document.documentElement.setAttribute('data-theme', 'dark');
+					localStorage.setItem('theme', 'dark');
+				} else {
+					document.documentElement.setAttribute('data-theme', 'light');
+					localStorage.setItem('theme', 'light');
+				}
+				this.themeSwitch = !this.themeSwitch;
+			},
 			'changeHumor': function (event) {
 				const str = event.target.value.charAt(0).toUpperCase() + event.target.value.slice(1);
 				this.humorSetting = 'humor' + str;

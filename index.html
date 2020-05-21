@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="">
 <head>
 	<meta charset="utf-8" />
 	<title>Mainstream Screenplay Generator</title>
@@ -26,7 +26,12 @@
 		<div id="app">
 			<form>
 				<fieldset class="settings" v-if="content.mainValues">
+					<nav>
+						<label id="theme"><input type="checkbox" id="theme-switch" @click="toggleTheme" v-model="themeSwitch" /><span></span></label>
+					</nav>
+
 					<div id="logo"></div>
+
 					<h2>Grundwerte</h2>
 					<div>
 						<div class="humor">

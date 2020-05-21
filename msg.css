@@ -1,11 +1,21 @@
 :root {
 	color-scheme: light dark;
 
+	--color-mode: 'light';
 	--system-color-type: rgba(25,25,25,1);
 	--system-color-background: rgba(240,240,240,1);
 	--system-color-gray-1: rgba(225,225,220,1);
 	--system-color-gray-2: rgba(185,185,180,1);
 	--system-color-gray-3: rgba(105,105,105,1);
+}
+
+[data-theme="dark"] {
+	--color-mode: 'dark';
+	--system-color-type: rgba(190,190,190,1);
+	--system-color-background: rgba(50,50,50,1);
+	--system-color-gray-1: rgba(92,92,90,1);
+	--system-color-gray-2: rgba(25,25,25,1);
+	--system-color-gray-3: rgba(125,125,125,1);
 }
 
 * {
@@ -18,6 +28,7 @@ html {
 
 	background-color: var(--system-color-gray-2);
     color: var(--system-color-type);
+    /* transition: background-color 200ms ease-in-out, color 200ms ease; */
 }
 
 body { margin: 0.8em; }
@@ -80,6 +91,10 @@ select {
 	background-size: contain;
 }
 
+[data-theme="dark"] .settings > #logo {
+	background-image: url(./msg-logo-dark.png);
+}
+
 .settings select {
 	width: 100%;
 }
@@ -111,6 +126,39 @@ input[type="submit"] {
 	padding-top: 1.25em;
 }
 
+#theme {
+	display: block;
+	width: 100%;
+	margin-top: 0.5em;
+}
+
+#theme-switch {
+	color: var(--system-color-text);
+	opacity: 0;
+	width: 0;
+	margin: 0;
+}
+
+#theme-switch + span::after {
+	display: inline-block;
+	min-width: 8.5ch;
+	font-size: 0.85rem;
+	padding: 0.1rem 0.5rem;
+	border-radius: 0.2rem;
+	content: "Light Mode";
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	color: var(--system-color-text);
+	background-color: var(--system-color-gray-1);
+}
+
+#theme-switch:checked + span::after {
+	content: "Dark Mode";
+	color: var(--system-color-background);
+	background-color: var(--system-color-gray-3);
+}
+
 @media all and (min-width: 50em) {
 	#container {
 		flex-direction: row;
@@ -135,15 +183,17 @@ input[type="submit"] {
 @media (prefers-color-scheme: light) {}
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --system-color-type: rgba(190,190,190,1);
+	:root {
+		--color-mode: 'dark';
+	}
+
+	:root:not([data-theme]) {
+		--system-color-type: rgba(190,190,190,1);
 		--system-color-background: rgba(50,50,50,1);
 		--system-color-gray-1: rgba(92,92,90,1);
 		--system-color-gray-2: rgba(25,25,25,1);
 		--system-color-gray-3: rgba(125,125,125,1);
 	}
-
-	.settings > #logo {
-		background-image: url(./msg-logo-dark.png);
-	}
 }
+
+
